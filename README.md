@@ -1,7 +1,7 @@
-hb-pagination
+handlebars-pagination
 =============
 
-Paginated [Reddit](http://www.reddit.com/) json data, using [handlebars](http://handlebarsjs.com/) templates.
+Example of paginated data, using [handlebars](http://handlebarsjs.com/) templates.
 
 Adjust the options in `main.js` as necessary:
 
