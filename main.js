@@ -63,11 +63,11 @@ $(function(){
         url: "http://www.reddit.com/.json",
         success: function(response_json){
                     data = $(response_json.data.children);
-                    data_count = data.length;
+                    dataCount = data.length;
 
-                    pageCount = Math.ceil(data_count/PAGE_MAX);
+                    pageCount = Math.ceil(dataCount/PAGE_MAX);
 
-                    if (data_count > PAGE_MAX){
+                    if (dataCount > PAGE_MAX){
                         paginate(pageCount);
                         posts = data.slice(0, PAGE_MAX);
                     } else {
