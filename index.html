@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HB Pagination</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="handlebars.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <h2>HB Pagination</h2>
+    <hr>
+    <div id="posts"></div>
+
+    <script id="pagination-template" type="text/x-handlebars-template">
+    <ul class="pagination">
+        <li class="pagination-prev"><a href="#">&laquo;</a></li>
+        
+        {{#each pages}}
+        <li class="pagination-page" data-page="{{this}}"><a href="#">{{this}}</a></li>
+        {{/each}}
+        
+        <li class="pagination-next"><a href="#">&raquo;</a></li>
+    </ul>
+    </script>
+
+    <script id="post-template" type="text/x-handlebars-template">
+    <div class="post" id="post-{{id}}">
+        <div><strong><a href="{{url}}">{{title}}</a></strong> <span class="text-muted">{{domain}}</span></div>
+        <div>
+            <span><strong>Ups: </strong>{{ups}}</span>
+            <span><strong>Downs: </strong>{{downs}}</span>
+        </div>
+        <div>
+            Posted by <a href="http://reddit.com/u/{{author}}">{{author}}</a> to <a href="http://reddit.com/r/{{subreddit}}">{{subreddit}}</a>
+        </div>
+        <div>
+            <a href="http://reddit.com{{permalink}}">{{num_comments}} comments</a>
+        </div>
+    </div>
+    <hr>
+    </script>
+</body>
+</html>
