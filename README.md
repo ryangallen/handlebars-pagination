@@ -4,6 +4,7 @@ hb-pagination
 Paginated Reddit json data, using handlebars templates.
 
 Adjust the options in `main.js` as necessary:
+
     var opts = {
         pageMax: 5,                             // number of posts per page
         postsDiv: $('#posts'),                  // post container
